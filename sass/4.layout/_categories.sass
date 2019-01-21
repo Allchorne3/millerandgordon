@@ -1,0 +1,65 @@
+#categories
+    padding: $margin-tb-big
+
+    +respond(tabPort)
+        padding: $margin-tb-medium
+
+    +respond(phone)
+        padding: $margin-tb-small
+
+    .category-title
+        +generic-title
+        text-align: center
+        font-style: italic
+        font-weight: 900
+
+        +respond(phone)
+            font-weight: 400
+            font-size: 15px
+            text-transform: capitalize
+
+    #cat-options
+        max-width: 70%
+        margin: 0 auto
+        box-sizing: border-box
+        display: flex
+        justify-content: space-around
+
+        +respond(phone)
+            flex-direction: column
+            align-items: center
+
+        .option
+            width: 200px
+            text-align: center
+            margin: 0 30px
+
+            +respond(tabPort)
+                margin: 0 10px
+                
+            +respond(phone)
+                margin-bottom: 50px
+                float: none
+
+            &-title
+                margin: $margin-tb-small
+                font-weight: 600
+                font-size: 15px
+
+            &-img
+                box-shadow: inset 0 0 10px rgba(0,0,0,.1)
+                +size(200px)
+                border-radius: 50%
+                background:
+                    size: cover
+                    position: center
+
+                +respond(tabPort)
+                    +size(200px)
+
+            .men-img
+                background-image: url(../img/mens.jpg)
+            .female-img
+                background-image: url(../img/women.png)
+            .smart-img
+                background-image: url(../img/smartwatch.jpg)

@@ -1,0 +1,173 @@
+#hero
+    box-shadow: inset 0 0 10px rgba(0,0,0,.2)
+    border-bottom: solid 1px $clr-grey-light
+    height: 600px
+    overflow-y: hidden
+    position: relative
+    background: linear-gradient(to bottom right, #f1f1f1, #ffffff)
+    +respond(tabPort)
+        height: 300px
+
+    +respond(phone)
+        height: 100vh
+
+    .main-nav
+        height: 60px
+        line-height: 60px
+        padding-right: 40px
+
+        +respond(tabPort)
+            padding: 0
+
+        +respond(phone)
+            display: none
+        
+        ul
+            display: flex
+            justify-content: flex-end
+            +respond(tabPort)
+                justify-content: center
+            
+            li
+                list-style: none
+                &:not(:last-child)
+                    padding-right: 25px
+                
+                a
+                    text-decoration: none
+                    color: $clr-grey-mid2
+                    &::after
+                        content: ''
+                        display: block
+                        height: 2px
+                        background: $clr-grey-mid2
+                        opacity: .3
+                        position: relative
+                        top: -22px
+                        width: 0%
+
+                    &:hover::after
+                        width: 100%
+                        transition: $trans2-ease-in-out
+
+    .hero-watch
+        position: absolute
+        height: 760px
+        top: 0
+        left: 88px
+
+        +respond(tabPort)
+            display: none
+
+    .hero-logo
+        position: absolute
+        top: calc(50% - 75px)
+        left: calc(50% - 285px)
+        width: 570px
+        height: 150px
+        fill: $clr-grey-mid
+
+        +respond(tabPort)
+            width: 300
+            top: calc(50% - 75px)
+            left: calc(50% - 285px)
+
+        +respond(phone)
+            width: 285px
+            top: calc(50% - 75px)
+            left: calc(50% - 142.5px)
+            fill: $clr-grey-mid2
+    
+    .activeToggle
+        span:nth-child(3)
+            width: 10px 
+
+        span:nth-child(2)
+            width: 15px 
+            
+    .toggle-btn
+        position: fixed
+        right: 20px
+        top: 20px
+        z-index: 9999
+        background-color: white
+        display: none
+        padding: 10px
+        
+        +respond(phone)
+            right: 15px  
+            display: inline-block   
+
+        &:hover
+            cursor: pointer
+
+        &.noBg
+            background: none
+
+        span
+            display: block
+            width: 20px
+            height: 3px
+            background-color: $clr-grey-mid
+            margin: 3px 0
+            transition: all .1s ease-in-out
+
+    #sidebar
+        position: fixed
+        width: 100%
+        height: 100%
+        background: linear-gradient(rgba(29,29,29,1), rgba(29,29,29,.9)), url(../../img/mainbg.jpg)
+        z-index: 999
+        text-align: center
+        opacity: 0
+        top: -100%
+        transition: all .2s ease-in-out
+
+        &.active
+            top: 0
+            opacity: 1
+            display: block
+
+        ul
+            position: relative
+            top: 50%
+            transform: translatey(-55%)
+
+            .sidebar-logo
+                a
+                    font-family: $ff-main
+                    font-weight: 700
+                    letter-spacing: -5px
+                    font-size: 50px
+
+                small
+                    color: $clr-grey-mid2
+
+            li
+                list-style: none
+
+                a
+                    font-family: $ff-main
+                    color: $clr-grey-light
+                    text-decoration: none
+                    text-transform: uppercase
+                    font-weight: 500
+                    display: inline-block
+                    padding: 30px 0
+                    letter-spacing: 5px
+                    transition: all .3s linear
+                    
+                    &:hover
+                        color: white
+
+                &:not(:first-child):not(:last-child)::after
+                    content: ''
+                    display: block
+                    height: 2px
+                    background: $clr-grey-mid2
+                    opacity: .3
+                    position: relative
+                    top: 50%
+                    left: 50%
+                    transform: translateX(-50%)
+                    width: 100px          

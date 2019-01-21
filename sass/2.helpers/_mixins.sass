@@ -1,0 +1,46 @@
+@mixin section-title
+    text-transform: uppercase
+    color: $clr-grey-mid2
+    font-size: 20px
+    letter-spacing: 3px
+    font-weight: 300
+    margin-bottom: $margin-b-medium
+    padding-bottom: $margin-b-medium
+
+    span
+        font-style: italic
+        font-weight: 900 
+
+@mixin section-title-tabPort
+    text-transform: uppercase
+    color: $clr-grey-mid2
+    font-size: 20px
+    letter-spacing: 3px
+    font-weight: 300
+    margin-bottom: $margin-b-small
+    padding-bottom: $margin-b-small
+
+    span
+        font-style: italic
+        font-weight: 900   
+
+@mixin generic-title
+    text-transform: uppercase
+    color: $clr-grey-mid2
+    font-size: 20px
+    letter-spacing: 3px
+    font-weight: 600
+    margin-bottom: $margin-b-medium
+    padding-bottom: $margin-b-medium
+
+@mixin service-bg($image)
+	background:
+		image: linear-gradient(rgba($clr-grey-mid2, .7), rgba($clr-grey-mid2, .7)), url($image)
+		size: cover
+		position: center 
+
+@mixin footer-title
+    font-family: $ff-body
+    font-weight: 600
+    text-transform: uppercase
+    letter-spacing: 1px

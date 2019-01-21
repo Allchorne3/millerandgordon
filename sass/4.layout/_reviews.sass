@@ -1,0 +1,67 @@
+#reviews
+    padding: $margin-tb-big
+
+    +respond(tabPort)
+        padding: $margin-tb-medium
+
+    .reviews-title
+        text-align: center
+        color: $clr-grey-mid2
+
+        h4
+            display: inline-block
+            font-style: italic
+            font-weight: 900
+            font-size: 15px
+            font-family: $ff-main
+            border-bottom: solid 1px $clr-grey-light
+
+        h5
+            font-weight: 300
+            letter-spacing: 1px
+
+    #review-container
+        padding-top: $margin-t-medium
+        width: 100%
+        margin: 0 auto
+        display: flex
+        justify-content: center
+        flex-direction: row
+        flex-wrap: wrap
+
+        +respond(phone)
+            padding-top: $margin-t-small
+
+        .review-card
+            box-sizing: border-box
+            text-align: center
+            width: 220px
+            margin: 10px
+            font-family: $ff-body
+            background-color: $clr-smoke-white
+            box-shadow: 0 0 3px rgba(0,0,0,.1)
+            padding: 20px
+
+            +respond(tabPort)
+                width: 200px
+
+            &-image
+                +size(50px)
+                border-radius: 50%
+
+            &-name,
+            .store
+                font-size: 13px
+                font-style: italic
+                font-weight: 300
+            &-stars
+                height: 20px
+
+            .user-review
+                font-size: 14px
+                margin-bottom: 40px
+            
+            .store
+                background-color: $clr-grey-light
+                padding: $margin-tb-small
+                display: block

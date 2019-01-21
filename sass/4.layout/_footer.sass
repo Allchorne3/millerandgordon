@@ -1,0 +1,183 @@
+footer
+    background-color: $clr-grey-black
+    color: $clr-smoke-white
+
+    .footer-container
+        display: flex
+        flex-direction: row 
+        justify-content: center
+        padding: 30px
+
+        +respond(tabLand)
+            padding: 20px
+
+        +respond(tabPort)
+            justify-content: center
+        
+        #footer-left
+            display: flex
+            flex-direction: row
+            font-size: 14px
+
+            +respond(tabPort)
+                display: none
+            
+            .footer-list
+                margin: 0 20px
+                list-style: none
+
+                &-title
+                    text-transform: uppercase
+                    font-weight: 600
+                    font-size: 13px
+
+                a
+                    text-decoration: none
+                    color: $clr-smoke-white
+            
+            .contact-list
+
+                .list-email
+                    padding: 20px 0
+
+                    &::before,
+                    &::after
+                        content: ""
+                        display: block
+                        height: 1px
+                        width: 150px
+                        position: relative
+                        background-color: $clr-grey-mid2
+
+                    &::before
+                        top: -10px
+                    
+                    &::after
+                        top: 10px
+        
+        #footer-right
+            font-size: 14px
+            padding-left: 40px
+
+            +respond(tabPort)
+                padding-left: 0
+
+            .newsletter
+                margin-bottom: 40px
+
+                +respond(phone)
+                    margin-bottom: 10px
+
+                +respond(tabPort)
+                    text-align: center
+
+                h2
+                    font-size: 15px
+                    +footer-title
+
+                    +respond(phone)
+                        font-size: 12px
+                        margin-bottom: 5px
+
+                p
+                    margin-bottom: 10px
+
+                input
+                    background: none
+                    border: solid 1px $clr-grey-light
+                    padding: 2px
+                    width: 200px
+                    margin: 0 5px 10px 0
+
+                ::-webkit-input-placeholder
+                    font-size: 10px
+                    color: $clr-grey-mid2
+
+                button
+                    background-color: $clr-grey-light
+                    border: none
+                    height: 20px
+                    width: 60px
+                    text-transform: uppercase
+                    font-size: 9px
+                    position: relative
+                    top: -2px
+                    font-family: $ff-body
+                    letter-spacing: 1px
+
+            .find-us
+                display: flex
+                flex-direction: row
+                //width: 80%
+                //background-color: blue
+                
+
+                .social
+                    margin-left: 20px
+
+                    ul
+                        +respond(phone)
+                        margin-top: 10px
+                    li
+                        display: inline-block
+                        
+                        a
+                            color: $clr-grey-mid
+                            transition: $trans2-ease-in-out
+
+                            &:hover
+                                color: $clr-smoke-white
+
+
+                        &:not(:last-child)
+                            margin-right: 5px
+
+                h4
+                    +footer-title
+                    font-size: 14px
+
+                li
+                    list-style: none
+
+                +respond(tabPort)
+                    flex-direction: column
+                    align-items: center
+                    text-align: center
+
+                    .social
+                        margin: 0
+
+                    .store-locations
+                        h4
+                            display: none
+                        
+                        .stores
+                            margin-bottom: 10px
+
+                            li
+                                display: inline-block
+                                margin-right: 10px
+                                color: $clr-grey-mid
+
+                +respond(phone)
+                    .store-locations
+                        display: none
+
+    .service-links
+        display: none
+        text-align: center
+        padding: $margin-tb-medium
+        text-transform: uppercase
+
+        a
+            text-decoration: none
+            color: $clr-grey-mid
+            letter-spacing: 1px
+            transition: $trans2-ease-in-out
+
+            &:hover
+                color: $clr-smoke-white
+
+        +respond(phone)
+            display: block
+   

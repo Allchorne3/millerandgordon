@@ -1,0 +1,86 @@
+html
+    scroll-behavior: smooth
+    
+body
+    background:
+        image: linear-gradient(to bottom rgba($clr-smoke-white, .8), rgba($clr-smoke-white, .8)), url(../../img/mainbg.jpg)
+
+#container
+    width: 80%
+    margin: 50px auto
+    background-color: white
+    box-shadow: 0 0 10px rgba(0,0,0,0.2)
+    position: relative
+
+    +respond(phone)
+        width: 90%
+
+    #contact
+        display: none
+        overflow: hidden
+        background-color: $clr-smoke-white
+        width: 70%
+        text-align: center
+        position: fixed
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        height: 90%
+        box-shadow: 0 0 0 20em rgba(0,0,0, .6)
+        border-radius: 5px
+        z-index: 999999
+        padding-top: 50px
+        box-sizing: border-box
+
+        h4
+            text-transform: uppercase
+            letter-spacing: 3px
+            margin-bottom: 20px
+            color: $clr-grey-mid2
+
+        input
+            width: 80%
+            margin-bottom: 10px
+            padding: 5px
+
+            &[type="textarea"]
+                height: 200px
+
+        ::-webkit-input-placeholder
+            font-size: 10px
+            letter-spacing: 3px
+            padding-left: 5px
+
+        button
+            background: none
+            border: solid 1px $clr-grey-mid
+            padding: 5px 7px
+            letter-spacing: 3px
+            text-transform: uppercase
+            font-size: 8px
+            color: $clr-grey-mid2
+            transition: $trans2-ease-in-out
+
+            &:hover
+                cursor: pointer
+                background-color: $clr-grey-mid2
+                color: $clr-smoke-white
+
+        .exit-btn
+            text-transform: uppercase
+            letter-spacing: 3px
+            background-color: $clr-grey-mid2
+            color: $clr-smoke-white
+            position: absolute
+            top: 5px
+            right: 5px
+            padding: 3px 6px
+            font-size: 8px
+            border-radius: 3px
+            transition: $trans2-ease-in-out
+
+            &:hover
+                background-color: darken($clr-grey-mid2, 10%)
+                cursor: pointer
+
+

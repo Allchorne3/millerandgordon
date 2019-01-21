@@ -1,0 +1,22 @@
+/*=============================*/
+/* Media Query Manager
+/*=============================*/ 
+
+// Big Desktop: 1800px    
+// Tablet Landscape: 1200px    
+// Tablet Portable: 900px
+// Phone: 600px
+
+@mixin respond($breakpoint) 
+    @if $breakpoint == tabLand 
+        @media (max-width: 1200px)
+            @content
+
+    @if $breakpoint == tabPort
+        @media (max-width: 900px)
+            @content
+
+    @if $breakpoint == phone
+        @media (max-width: 600px)
+            @content
+    
